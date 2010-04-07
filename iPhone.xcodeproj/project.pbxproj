@@ -179,19 +179,20 @@
 /* End PBXGroup section */
 
 /* Begin PBXNativeTarget section */
-		D333CE75116D134C00E017CE /* Test */ = {
+		D333CE75116D134C00E017CE /* Tests */ = {
 			isa = PBXNativeTarget;
-			buildConfigurationList = D333CE7B116D134D00E017CE /* Build configuration list for PBXNativeTarget "Test" */;
+			buildConfigurationList = D333CE7B116D134D00E017CE /* Build configuration list for PBXNativeTarget "Tests" */;
 			buildPhases = (
 				D333CE72116D134C00E017CE /* Resources */,
 				D333CE73116D134C00E017CE /* Sources */,
 				D333CE74116D134C00E017CE /* Frameworks */,
+				D30E5611116D2DE20068F320 /* ShellScript */,
 			);
 			buildRules = (
 			);
 			dependencies = (
 			);
-			name = Test;
+			name = Tests;
 			productName = Test;
 			productReference = D333CE76116D134C00E017CE /* Test.app */;
 			productType = "com.apple.product-type.application";
@@ -208,7 +209,7 @@
 			projectDirPath = "";
 			projectRoot = "";
 			targets = (
-				D333CE75116D134C00E017CE /* Test */,
+				D333CE75116D134C00E017CE /* Tests */,
 			);
 		};
 /* End PBXProject section */
@@ -222,6 +223,23 @@
 			runOnlyForDeploymentPostprocessing = 0;
 		};
 /* End PBXResourcesBuildPhase section */
+
+/* Begin PBXShellScriptBuildPhase section */
+		D30E5611116D2DE20068F320 /* ShellScript */ = {
+			isa = PBXShellScriptBuildPhase;
+			buildActionMask = 2147483647;
+			files = (
+			);
+			inputPaths = (
+			);
+			outputPaths = (
+			);
+			runOnlyForDeploymentPostprocessing = 0;
+			shellPath = /bin/sh;
+			shellScript = "sh run_tests.sh";
+			showEnvVarsInLog = 0;
+		};
+/* End PBXShellScriptBuildPhase section */
 
 /* Begin PBXSourcesBuildPhase section */
 		D333CE73116D134C00E017CE /* Sources */ = {
@@ -354,7 +372,7 @@
 			defaultConfigurationIsVisible = 0;
 			defaultConfigurationName = Release;
 		};
-		D333CE7B116D134D00E017CE /* Build configuration list for PBXNativeTarget "Test" */ = {
+		D333CE7B116D134D00E017CE /* Build configuration list for PBXNativeTarget "Tests" */ = {
 			isa = XCConfigurationList;
 			buildConfigurations = (
 				D333CE79116D134D00E017CE /* Debug */,
