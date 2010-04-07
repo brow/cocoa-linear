@@ -7,6 +7,11 @@
 	objects = {
 
 /* Begin PBXBuildFile section */
+		D30E5640116D40D50068F320 /* CLConversions.m in Sources */ = {isa = PBXBuildFile; fileRef = D30E5637116D40D50068F320 /* CLConversions.m */; };
+		D30E5641116D40D50068F320 /* CLMatrix2x2.m in Sources */ = {isa = PBXBuildFile; fileRef = D30E5639116D40D50068F320 /* CLMatrix2x2.m */; };
+		D30E5642116D40D50068F320 /* CLMatrix3x3.m in Sources */ = {isa = PBXBuildFile; fileRef = D30E563B116D40D50068F320 /* CLMatrix3x3.m */; };
+		D30E5643116D40D50068F320 /* CLQuaternion.m in Sources */ = {isa = PBXBuildFile; fileRef = D30E563D116D40D50068F320 /* CLQuaternion.m */; };
+		D30E5644116D40D50068F320 /* CLVector.m in Sources */ = {isa = PBXBuildFile; fileRef = D30E563F116D40D50068F320 /* CLVector.m */; };
 		D333CEC2116D142A00E017CE /* CoreGraphics.framework in Frameworks */ = {isa = PBXBuildFile; fileRef = 288765FC0DF74451002DB57D /* CoreGraphics.framework */; };
 		D333CF4D116D15F300E017CE /* SenTestingKit.framework in Frameworks */ = {isa = PBXBuildFile; fileRef = D333CF4C116D15F300E017CE /* SenTestingKit.framework */; };
 		D333CFA1116D166D00E017CE /* QuartzCore.framework in Frameworks */ = {isa = PBXBuildFile; fileRef = D333CFA0116D166D00E017CE /* QuartzCore.framework */; };
@@ -16,17 +21,22 @@
 		D36F83CD116D202600F596DE /* CLQuaternionTests.m in Sources */ = {isa = PBXBuildFile; fileRef = D36F83C5116D202600F596DE /* CLQuaternionTests.m */; };
 		D36F83CE116D202600F596DE /* CLTests.m in Sources */ = {isa = PBXBuildFile; fileRef = D36F83C7116D202600F596DE /* CLTests.m */; };
 		D36F83CF116D202600F596DE /* CLVectorTests.m in Sources */ = {isa = PBXBuildFile; fileRef = D36F83C9116D202600F596DE /* CLVectorTests.m */; };
-		D3CA2032116D1DA900F822DB /* CLConversions.m in Sources */ = {isa = PBXBuildFile; fileRef = D3CA2029116D1DA900F822DB /* CLConversions.m */; };
-		D3CA2033116D1DA900F822DB /* CLMatrix2x2.m in Sources */ = {isa = PBXBuildFile; fileRef = D3CA202B116D1DA900F822DB /* CLMatrix2x2.m */; };
-		D3CA2034116D1DA900F822DB /* CLMatrix3x3.m in Sources */ = {isa = PBXBuildFile; fileRef = D3CA202D116D1DA900F822DB /* CLMatrix3x3.m */; };
-		D3CA2035116D1DA900F822DB /* CLQuaternion.m in Sources */ = {isa = PBXBuildFile; fileRef = D3CA202F116D1DA900F822DB /* CLQuaternion.m */; };
-		D3CA2036116D1DA900F822DB /* CLVector.m in Sources */ = {isa = PBXBuildFile; fileRef = D3CA2031116D1DA900F822DB /* CLVector.m */; };
 /* End PBXBuildFile section */
 
 /* Begin PBXFileReference section */
 		1D30AB110D05D00D00671497 /* Foundation.framework */ = {isa = PBXFileReference; lastKnownFileType = wrapper.framework; name = Foundation.framework; path = System/Library/Frameworks/Foundation.framework; sourceTree = SDKROOT; };
 		1DF5F4DF0D08C38300B7A737 /* UIKit.framework */ = {isa = PBXFileReference; lastKnownFileType = wrapper.framework; name = UIKit.framework; path = System/Library/Frameworks/UIKit.framework; sourceTree = SDKROOT; };
 		288765FC0DF74451002DB57D /* CoreGraphics.framework */ = {isa = PBXFileReference; lastKnownFileType = wrapper.framework; name = CoreGraphics.framework; path = System/Library/Frameworks/CoreGraphics.framework; sourceTree = SDKROOT; };
+		D30E5636116D40D50068F320 /* CLConversions.h */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.c.h; name = CLConversions.h; path = CocoaLinear/CLConversions.h; sourceTree = "<group>"; };
+		D30E5637116D40D50068F320 /* CLConversions.m */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.c.objc; name = CLConversions.m; path = CocoaLinear/CLConversions.m; sourceTree = "<group>"; };
+		D30E5638116D40D50068F320 /* CLMatrix2x2.h */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.c.h; name = CLMatrix2x2.h; path = CocoaLinear/CLMatrix2x2.h; sourceTree = "<group>"; };
+		D30E5639116D40D50068F320 /* CLMatrix2x2.m */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.c.objc; name = CLMatrix2x2.m; path = CocoaLinear/CLMatrix2x2.m; sourceTree = "<group>"; };
+		D30E563A116D40D50068F320 /* CLMatrix3x3.h */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.c.h; name = CLMatrix3x3.h; path = CocoaLinear/CLMatrix3x3.h; sourceTree = "<group>"; };
+		D30E563B116D40D50068F320 /* CLMatrix3x3.m */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.c.objc; name = CLMatrix3x3.m; path = CocoaLinear/CLMatrix3x3.m; sourceTree = "<group>"; };
+		D30E563C116D40D50068F320 /* CLQuaternion.h */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.c.h; name = CLQuaternion.h; path = CocoaLinear/CLQuaternion.h; sourceTree = "<group>"; };
+		D30E563D116D40D50068F320 /* CLQuaternion.m */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.c.objc; name = CLQuaternion.m; path = CocoaLinear/CLQuaternion.m; sourceTree = "<group>"; };
+		D30E563E116D40D50068F320 /* CLVector.h */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.c.h; name = CLVector.h; path = CocoaLinear/CLVector.h; sourceTree = "<group>"; };
+		D30E563F116D40D50068F320 /* CLVector.m */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.c.objc; name = CLVector.m; path = CocoaLinear/CLVector.m; sourceTree = "<group>"; };
 		D333CE76116D134C00E017CE /* Test.app */ = {isa = PBXFileReference; explicitFileType = wrapper.application; includeInIndex = 0; path = Test.app; sourceTree = BUILT_PRODUCTS_DIR; };
 		D333CF4C116D15F300E017CE /* SenTestingKit.framework */ = {isa = PBXFileReference; lastKnownFileType = wrapper.framework; name = SenTestingKit.framework; path = Library/Frameworks/SenTestingKit.framework; sourceTree = DEVELOPER_DIR; };
 		D333CFA0116D166D00E017CE /* QuartzCore.framework */ = {isa = PBXFileReference; lastKnownFileType = wrapper.framework; name = QuartzCore.framework; path = System/Library/Frameworks/QuartzCore.framework; sourceTree = SDKROOT; };
@@ -54,16 +64,6 @@
 		D36F83C7116D202600F596DE /* CLTests.m */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.c.objc; path = CLTests.m; sourceTree = "<group>"; };
 		D36F83C8116D202600F596DE /* CLVectorTests.h */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.c.h; path = CLVectorTests.h; sourceTree = "<group>"; };
 		D36F83C9116D202600F596DE /* CLVectorTests.m */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.c.objc; path = CLVectorTests.m; sourceTree = "<group>"; };
-		D3CA2028116D1DA900F822DB /* CLConversions.h */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.c.h; path = CLConversions.h; sourceTree = "<group>"; };
-		D3CA2029116D1DA900F822DB /* CLConversions.m */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.c.objc; path = CLConversions.m; sourceTree = "<group>"; };
-		D3CA202A116D1DA900F822DB /* CLMatrix2x2.h */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.c.h; path = CLMatrix2x2.h; sourceTree = "<group>"; };
-		D3CA202B116D1DA900F822DB /* CLMatrix2x2.m */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.c.objc; path = CLMatrix2x2.m; sourceTree = "<group>"; };
-		D3CA202C116D1DA900F822DB /* CLMatrix3x3.h */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.c.h; path = CLMatrix3x3.h; sourceTree = "<group>"; };
-		D3CA202D116D1DA900F822DB /* CLMatrix3x3.m */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.c.objc; path = CLMatrix3x3.m; sourceTree = "<group>"; };
-		D3CA202E116D1DA900F822DB /* CLQuaternion.h */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.c.h; path = CLQuaternion.h; sourceTree = "<group>"; };
-		D3CA202F116D1DA900F822DB /* CLQuaternion.m */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.c.objc; path = CLQuaternion.m; sourceTree = "<group>"; };
-		D3CA2030116D1DA900F822DB /* CLVector.h */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.c.h; path = CLVector.h; sourceTree = "<group>"; };
-		D3CA2031116D1DA900F822DB /* CLVector.m */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.c.objc; path = CLVector.m; sourceTree = "<group>"; };
 /* End PBXFileReference section */
 
 /* Begin PBXFrameworksBuildPhase section */
@@ -162,16 +162,16 @@
 		D3CA200F116D1D5400F822DB /* Cocoa Linear */ = {
 			isa = PBXGroup;
 			children = (
-				D3CA2028116D1DA900F822DB /* CLConversions.h */,
-				D3CA2029116D1DA900F822DB /* CLConversions.m */,
-				D3CA202A116D1DA900F822DB /* CLMatrix2x2.h */,
-				D3CA202B116D1DA900F822DB /* CLMatrix2x2.m */,
-				D3CA202C116D1DA900F822DB /* CLMatrix3x3.h */,
-				D3CA202D116D1DA900F822DB /* CLMatrix3x3.m */,
-				D3CA202E116D1DA900F822DB /* CLQuaternion.h */,
-				D3CA202F116D1DA900F822DB /* CLQuaternion.m */,
-				D3CA2030116D1DA900F822DB /* CLVector.h */,
-				D3CA2031116D1DA900F822DB /* CLVector.m */,
+				D30E5636116D40D50068F320 /* CLConversions.h */,
+				D30E5637116D40D50068F320 /* CLConversions.m */,
+				D30E5638116D40D50068F320 /* CLMatrix2x2.h */,
+				D30E5639116D40D50068F320 /* CLMatrix2x2.m */,
+				D30E563A116D40D50068F320 /* CLMatrix3x3.h */,
+				D30E563B116D40D50068F320 /* CLMatrix3x3.m */,
+				D30E563C116D40D50068F320 /* CLQuaternion.h */,
+				D30E563D116D40D50068F320 /* CLQuaternion.m */,
+				D30E563E116D40D50068F320 /* CLVector.h */,
+				D30E563F116D40D50068F320 /* CLVector.m */,
 			);
 			name = "Cocoa Linear";
 			sourceTree = "<group>";
@@ -246,16 +246,16 @@
 			isa = PBXSourcesBuildPhase;
 			buildActionMask = 2147483647;
 			files = (
-				D3CA2032116D1DA900F822DB /* CLConversions.m in Sources */,
-				D3CA2033116D1DA900F822DB /* CLMatrix2x2.m in Sources */,
-				D3CA2034116D1DA900F822DB /* CLMatrix3x3.m in Sources */,
-				D3CA2035116D1DA900F822DB /* CLQuaternion.m in Sources */,
-				D3CA2036116D1DA900F822DB /* CLVector.m in Sources */,
 				D36F83CA116D202600F596DE /* GHUnitIPhoneTestMain.m in Sources */,
 				D36F83CC116D202600F596DE /* CLMatrix3x3Tests.m in Sources */,
 				D36F83CD116D202600F596DE /* CLQuaternionTests.m in Sources */,
 				D36F83CE116D202600F596DE /* CLTests.m in Sources */,
 				D36F83CF116D202600F596DE /* CLVectorTests.m in Sources */,
+				D30E5640116D40D50068F320 /* CLConversions.m in Sources */,
+				D30E5641116D40D50068F320 /* CLMatrix2x2.m in Sources */,
+				D30E5642116D40D50068F320 /* CLMatrix3x3.m in Sources */,
+				D30E5643116D40D50068F320 /* CLQuaternion.m in Sources */,
+				D30E5644116D40D50068F320 /* CLVector.m in Sources */,
 			);
 			runOnlyForDeploymentPostprocessing = 0;
 		};
