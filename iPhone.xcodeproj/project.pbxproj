@@ -13,7 +13,6 @@
 		D30E5643116D40D50068F320 /* CLQuaternion.m in Sources */ = {isa = PBXBuildFile; fileRef = D30E563D116D40D50068F320 /* CLQuaternion.m */; };
 		D30E5644116D40D50068F320 /* CLVector.m in Sources */ = {isa = PBXBuildFile; fileRef = D30E563F116D40D50068F320 /* CLVector.m */; };
 		D333CEC2116D142A00E017CE /* CoreGraphics.framework in Frameworks */ = {isa = PBXBuildFile; fileRef = 288765FC0DF74451002DB57D /* CoreGraphics.framework */; };
-		D333CF4D116D15F300E017CE /* SenTestingKit.framework in Frameworks */ = {isa = PBXBuildFile; fileRef = D333CF4C116D15F300E017CE /* SenTestingKit.framework */; };
 		D333CFA1116D166D00E017CE /* QuartzCore.framework in Frameworks */ = {isa = PBXBuildFile; fileRef = D333CFA0116D166D00E017CE /* QuartzCore.framework */; };
 		D36F83CA116D202600F596DE /* GHUnitIPhoneTestMain.m in Sources */ = {isa = PBXBuildFile; fileRef = D36F83BC116D202600F596DE /* GHUnitIPhoneTestMain.m */; };
 		D36F83CB116D202600F596DE /* libGHUnitIPhone3_0.a in Frameworks */ = {isa = PBXBuildFile; fileRef = D36F83BE116D202600F596DE /* libGHUnitIPhone3_0.a */; };
@@ -38,7 +37,6 @@
 		D30E563E116D40D50068F320 /* CLVector.h */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.c.h; name = CLVector.h; path = CocoaLinear/CLVector.h; sourceTree = "<group>"; };
 		D30E563F116D40D50068F320 /* CLVector.m */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.c.objc; name = CLVector.m; path = CocoaLinear/CLVector.m; sourceTree = "<group>"; };
 		D333CE76116D134C00E017CE /* Test.app */ = {isa = PBXFileReference; explicitFileType = wrapper.application; includeInIndex = 0; path = Test.app; sourceTree = BUILT_PRODUCTS_DIR; };
-		D333CF4C116D15F300E017CE /* SenTestingKit.framework */ = {isa = PBXFileReference; lastKnownFileType = wrapper.framework; name = SenTestingKit.framework; path = Library/Frameworks/SenTestingKit.framework; sourceTree = DEVELOPER_DIR; };
 		D333CFA0116D166D00E017CE /* QuartzCore.framework */ = {isa = PBXFileReference; lastKnownFileType = wrapper.framework; name = QuartzCore.framework; path = System/Library/Frameworks/QuartzCore.framework; sourceTree = SDKROOT; };
 		D36F83AE116D1FF700F596DE /* Test-Info.plist */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = text.plist.xml; path = "Test-Info.plist"; sourceTree = "<group>"; };
 		D36F83B2116D202600F596DE /* GHAsyncTestCase.h */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.c.h; path = GHAsyncTestCase.h; sourceTree = "<group>"; };
@@ -72,7 +70,6 @@
 			buildActionMask = 2147483647;
 			files = (
 				D333CEC2116D142A00E017CE /* CoreGraphics.framework in Frameworks */,
-				D333CF4D116D15F300E017CE /* SenTestingKit.framework in Frameworks */,
 				D333CFA1116D166D00E017CE /* QuartzCore.framework in Frameworks */,
 				D36F83CB116D202600F596DE /* libGHUnitIPhone3_0.a in Frameworks */,
 			);
@@ -114,7 +111,6 @@
 			isa = PBXGroup;
 			children = (
 				D333CFA0116D166D00E017CE /* QuartzCore.framework */,
-				D333CF4C116D15F300E017CE /* SenTestingKit.framework */,
 				1DF5F4DF0D08C38300B7A737 /* UIKit.framework */,
 				1D30AB110D05D00D00671497 /* Foundation.framework */,
 				288765FC0DF74451002DB57D /* CoreGraphics.framework */,

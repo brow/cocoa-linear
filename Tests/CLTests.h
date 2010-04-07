@@ -1,11 +1,9 @@
-#define USE_APPLICATION_UNIT_TEST 1
-
 #import <QuartzCore/QuartzCore.h>
-#import <SenTestingKit/SenTestingKit.h>
 #import <UIKit/UIKit.h>
+#import "GHTestCase.h"
 #import "CLVector.h"
 
-@interface CLTests : SenTestCase {
+@interface CLTests : GHTestCase {
 
 }
 

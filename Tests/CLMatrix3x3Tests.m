@@ -36,26 +36,26 @@
 - (void) testZero {
 	CLMatrix3x3 zero = CLMatrix3x3Zero();
 	CLMatrix3x3 test = CLMatrix3x3Multiply(a, zero);
-	STAssertEquals(zero, test, nil);
+	GHAssertEquals(zero, test, nil);
 }
 
 - (void) testIdentity {
 	CLMatrix3x3 identity = CLMatrix3x3Identity();
 	CLMatrix3x3 test = CLMatrix3x3Multiply(a, identity);
-	STAssertEquals(a, test, nil);
+	GHAssertEquals(a, test, nil);
 }
 
 - (void) testDeterminant {
-	STAssertEquals(CLMatrix3x3Determinant(a), (double)0, nil);
-	STAssertEquals(CLMatrix3x3Determinant(b), (double)-418, nil);
+	GHAssertEquals(CLMatrix3x3Determinant(a), (double)0, nil);
+	GHAssertEquals(CLMatrix3x3Determinant(b), (double)-418, nil);
 }
 
 - (void) testTranspose {
 	CLMatrix3x3 check = { 1, 4, 7,
 						2, 5, 8,
 						3, 6, 9 };
-	STAssertEquals(CLMatrix3x3Transpose(a), check, nil);
-	STAssertEquals(CLMatrix3x3Transpose(check), a, nil);
+	GHAssertEquals(CLMatrix3x3Transpose(a), check, nil);
+	GHAssertEquals(CLMatrix3x3Transpose(check), a, nil);
 }
 
 - (void) testMultiply {
@@ -65,8 +65,8 @@
 	CLMatrix3x3 checkBA = {	-23, -28, -33,
 							79, 89, 99,
 							37, 35, 33	};
-	STAssertEquals(CLMatrix3x3Multiply(a, b), checkAB, nil);
-	STAssertEquals(CLMatrix3x3Multiply(b, a), checkBA, nil);
+	GHAssertEquals(CLMatrix3x3Multiply(a, b), checkAB, nil);
+	GHAssertEquals(CLMatrix3x3Multiply(b, a), checkBA, nil);
 }
 
 - (void) testMultiply2 {
@@ -90,9 +90,9 @@
 }
 
 - (void) testTrace {
-	STAssertEquals(CLMatrix3x3Trace(a), (double)15, nil);
-	STAssertEquals(CLMatrix3x3Trace(b), (double)10, nil);
-	STAssertEquals(CLMatrix3x3Trace(c), (double)9, nil);
+	GHAssertEquals(CLMatrix3x3Trace(a), (double)15, nil);
+	GHAssertEquals(CLMatrix3x3Trace(b), (double)10, nil);
+	GHAssertEquals(CLMatrix3x3Trace(c), (double)9, nil);
 }
 
 - (void) testSubtract {
@@ -102,22 +102,22 @@
 - (void) testEigenvalues {
 	double test[3], checkA[3] = {-1.116844, 0, 16.116844}, checkC[3] = {1, 2, 6};
 	CLMatrix3x3Eigenvalues(a, test);	
-	STAssertEqualsWithAccuracy(test[0], checkA[0], ACCURACY, nil);
-	STAssertEqualsWithAccuracy(test[1], checkA[1], ACCURACY, nil);
-	STAssertEqualsWithAccuracy(test[2], checkA[2], ACCURACY, nil);
+	GHAssertEqualsWithAccuracy(test[0], checkA[0], ACCURACY, nil);
+	GHAssertEqualsWithAccuracy(test[1], checkA[1], ACCURACY, nil);
+	GHAssertEqualsWithAccuracy(test[2], checkA[2], ACCURACY, nil);
 	
 	CLMatrix3x3Eigenvalues(c, test);
-	STAssertEqualsWithAccuracy(test[0], checkC[0], ACCURACY, nil);
-	STAssertEqualsWithAccuracy(test[1], checkC[1], ACCURACY, nil);
-	STAssertEqualsWithAccuracy(test[2], checkC[2], ACCURACY, nil);
+	GHAssertEqualsWithAccuracy(test[0], checkC[0], ACCURACY, nil);
+	GHAssertEqualsWithAccuracy(test[1], checkC[1], ACCURACY, nil);
+	GHAssertEqualsWithAccuracy(test[2], checkC[2], ACCURACY, nil);
 }
 
 - (void) testEigenvaluesOneReal {
 	double test[3], check[3] = {0, 0, 1};
 	CLMatrix3x3Eigenvalues(e, test);	
-	STAssertEqualsWithAccuracy(test[0], check[0], ACCURACY, nil);
-	STAssertEqualsWithAccuracy(test[1], check[1], ACCURACY, nil);
-	STAssertEqualsWithAccuracy(test[2], check[2], ACCURACY, nil);
+	GHAssertEqualsWithAccuracy(test[0], check[0], ACCURACY, nil);
+	GHAssertEqualsWithAccuracy(test[1], check[1], ACCURACY, nil);
+	GHAssertEqualsWithAccuracy(test[2], check[2], ACCURACY, nil);
 }
 
 - (void) testEigenvectorsSymmetric{
@@ -127,18 +127,18 @@
 												0.128914, -0.594840, 0.793440 };
 	
 	CLMatrix3x3SymmetricEigenvectors(d, testValues, testVectors);
-	STAssertEqualsWithAccuracy(testValues[0], checkValues[0], ACCURACY, nil);
-	STAssertEqualsWithAccuracy(testValues[1], checkValues[1], ACCURACY, nil);
-	STAssertEqualsWithAccuracy(testValues[2], checkValues[2], ACCURACY, nil);
-	STAssertEqualsWithAccuracy(abs(testVectors[0].x), abs(checkVectors[0].x), ACCURACY, nil);
-	STAssertEqualsWithAccuracy(abs(testVectors[0].y), abs(checkVectors[0].y), ACCURACY, nil);
-	STAssertEqualsWithAccuracy(abs(testVectors[0].z), abs(checkVectors[0].z), ACCURACY, nil);
-	STAssertEqualsWithAccuracy(abs(testVectors[1].x), abs(checkVectors[1].x), ACCURACY, nil);
-	STAssertEqualsWithAccuracy(abs(testVectors[1].y), abs(checkVectors[1].y), ACCURACY, nil);
-	STAssertEqualsWithAccuracy(abs(testVectors[1].z), abs(checkVectors[1].z), ACCURACY, nil);
-	STAssertEqualsWithAccuracy(abs(testVectors[2].x), abs(checkVectors[2].x), ACCURACY, nil);
-	STAssertEqualsWithAccuracy(abs(testVectors[2].y), abs(checkVectors[2].y), ACCURACY, nil);
-	STAssertEqualsWithAccuracy(abs(testVectors[2].z), abs(checkVectors[2].z), ACCURACY, nil);
+	GHAssertEqualsWithAccuracy(testValues[0], checkValues[0], ACCURACY, nil);
+	GHAssertEqualsWithAccuracy(testValues[1], checkValues[1], ACCURACY, nil);
+	GHAssertEqualsWithAccuracy(testValues[2], checkValues[2], ACCURACY, nil);
+	GHAssertEqualsWithAccuracy(abs(testVectors[0].x), abs(checkVectors[0].x), ACCURACY, nil);
+	GHAssertEqualsWithAccuracy(abs(testVectors[0].y), abs(checkVectors[0].y), ACCURACY, nil);
+	GHAssertEqualsWithAccuracy(abs(testVectors[0].z), abs(checkVectors[0].z), ACCURACY, nil);
+	GHAssertEqualsWithAccuracy(abs(testVectors[1].x), abs(checkVectors[1].x), ACCURACY, nil);
+	GHAssertEqualsWithAccuracy(abs(testVectors[1].y), abs(checkVectors[1].y), ACCURACY, nil);
+	GHAssertEqualsWithAccuracy(abs(testVectors[1].z), abs(checkVectors[1].z), ACCURACY, nil);
+	GHAssertEqualsWithAccuracy(abs(testVectors[2].x), abs(checkVectors[2].x), ACCURACY, nil);
+	GHAssertEqualsWithAccuracy(abs(testVectors[2].y), abs(checkVectors[2].y), ACCURACY, nil);
+	GHAssertEqualsWithAccuracy(abs(testVectors[2].z), abs(checkVectors[2].z), ACCURACY, nil);
 }
 
 @end

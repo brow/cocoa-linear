@@ -7,10 +7,10 @@
 }
 
 - (void) assertDouble:(double)a equalsDouble:(double)b withAccuracy:(double)accuracy {
-	/* STAssertEqualsWithAccuracy is inaccurate when either argument is not finite. */
-	STAssertTrue(isfinite(a), nil);
-	STAssertTrue(isfinite(b), nil);
-	STAssertEqualsWithAccuracy(a, b, accuracy, nil);
+	/* GHAssertEqualsWithAccuracy is inaccurate when either argument is not finite. */
+	GHAssertTrue(isfinite(a), nil);
+	GHAssertTrue(isfinite(b), nil);
+	GHAssertEqualsWithAccuracy(a, b, accuracy, nil);
 }
 
 - (void) assertTransform:(CATransform3D)a equalsTransform:(CATransform3D)b withAccuracy:(double)accuracy {

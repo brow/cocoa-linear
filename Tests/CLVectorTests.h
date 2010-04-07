@@ -1,9 +1,8 @@
-#import <SenTestingKit/SenTestingKit.h>
 #import <UIKit/UIKit.h>
-
+#import "GHUnit.h"
 #import "CLVector.h"
 
-@interface VectorTests : SenTestCase {
+@interface VectorTests : GHTestCase {
 	CLVector a, b, c;
 }
 

@@ -1,13 +1,14 @@
 #import "CLVectorTests.h"
+#import "GHUnit.h"
 
 #define ACCURACY 0.000000001
 
 @implementation VectorTests
 
 - (void) assertVector:(CLVector)test equalsVector:(CLVector)check withAccuracy:(double)accuracy {
-	STAssertEqualsWithAccuracy(test.x, check.x, ACCURACY, nil);
-	STAssertEqualsWithAccuracy(test.y, check.y, ACCURACY, nil);
-	STAssertEqualsWithAccuracy(test.z, check.z, ACCURACY, nil);
+	GHAssertEqualsWithAccuracy(test.x, check.x, ACCURACY, nil);
+	GHAssertEqualsWithAccuracy(test.y, check.y, ACCURACY, nil);
+	GHAssertEqualsWithAccuracy(test.z, check.z, ACCURACY, nil);
 }
 
 - (void) setUp {
@@ -33,7 +34,7 @@
 - (void) testDot {
 	double test = CLVectorDotProduct(a,b);
 	double check = -1.2;
-	STAssertEqualsWithAccuracy(test, check, ACCURACY, nil);
+	GHAssertEqualsWithAccuracy(test, check, ACCURACY, nil);
 }
 
 - (void) testNormalize {
