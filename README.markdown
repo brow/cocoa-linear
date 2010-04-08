@@ -4,7 +4,7 @@ CocoaLinear is a small linear algebra library aimed at Mac OS X and iPhone appli
 
 #Installation
 
-Just add the files in the`CocoaLinear` directory to your XCode project.  
+Just add the files in the `CocoaLinear` directory to your XCode project.  
 
 The other files included are for unit testing only.  To run those tests, navigate to the root directory and run `make test`.  You'll need to have iPhone SDK 3.0 or later installed.
 
