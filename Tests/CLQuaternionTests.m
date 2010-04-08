@@ -20,22 +20,22 @@
 - (void) testConvertIdentity {
 	CATransform3D rotation = CATransform3DIdentity;
 	CLQuaternion check = {1, 0, 0, 0};
-	CLQuaternion test = QuaternionFromCATransform3D(rotation);
+	CLQuaternion test = CLQuaternionFromCATransform3D(rotation);
 	[self assertQuaternion:test equalsQuaternion:check withAccuracy:0.0000001];
 }
 
 - (void) testConversionTo {
 	CATransform3D rotation = CATransform3DMakeRotation(0.4, 0.9, 0.7, 0.6);
 	CLQuaternion check = {0.9800665741417773, -0.13877757041056324, -0.10793811236000465, -0.09251838894658905};
-	CLQuaternion test = QuaternionFromCATransform3D(rotation);
+	CLQuaternion test = CLQuaternionFromCATransform3D(rotation);
 	[self assertQuaternion:test equalsQuaternion:check withAccuracy:0.0000001];
 }
 
 - (void) testConversionFrom {
 	for (int trial = 0; trial < 200; trial++) {
 		CATransform3D rotation = randomRotation();
-		CLQuaternion testQuaternion = QuaternionFromCATransform3D(rotation);
-		CATransform3D test = QuaternionToCATransform3D(testQuaternion);
+		CLQuaternion testQuaternion = CLQuaternionFromCATransform3D(rotation);
+		CATransform3D test = CLQuaternionToCATransform3D(testQuaternion);
 		[self assertTransform:test equalsTransform:rotation withAccuracy:0.0001];
 	}
 }
@@ -45,14 +45,14 @@
 		CLVector v = randomNormalizedVector();
 		float angle = pow(10, -(rand() % 15));
 		CATransform3D rotation = CATransform3DMakeRotation(angle, v.x, v.y, v.z);
-		CLQuaternion testQuaternion = QuaternionFromCATransform3D(rotation);
-		CATransform3D test = QuaternionToCATransform3D(testQuaternion);
+		CLQuaternion testQuaternion = CLQuaternionFromCATransform3D(rotation);
+		CATransform3D test = CLQuaternionToCATransform3D(testQuaternion);
 		[self assertTransform:test equalsTransform:rotation withAccuracy:0.00001];
 	}
 }
 
 - (void) testNormalize {
-	CLQuaternion q = QuaternionFromCATransform3D(randomRotation());
+	CLQuaternion q = CLQuaternionFromCATransform3D(randomRotation());
 	double c = 7;
 	CLQuaternion cq = CLQuaternionMultiplyScalar(q, c);
 	[self assertDouble:CLQuaternionLength(q) equalsDouble:1 withAccuracy:0.0000001];
@@ -64,12 +64,12 @@
 	for (int trial = 0; trial < 200; trial++) {
 		CATransform3D a = randomRotation();
 		CATransform3D b = randomRotation();
-		CLQuaternion qA = QuaternionFromCATransform3D(a);
-		CLQuaternion qB = QuaternionFromCATransform3D(b);
+		CLQuaternion qA = CLQuaternionFromCATransform3D(a);
+		CLQuaternion qB = CLQuaternionFromCATransform3D(b);
 		CLQuaternion qAB = CLQuaternionMultiply(qA,qB);
 		
-		[self assertTransform:QuaternionToCATransform3D(qAB) equalsTransform:CATransform3DConcat(a,b) withAccuracy:0.0001];
-		[self assertQuaternion:qAB equalsQuaternion:QuaternionFromCATransform3D(CATransform3DConcat(a, b)) withAccuracy:0.0001];
+		[self assertTransform:CLQuaternionToCATransform3D(qAB) equalsTransform:CATransform3DConcat(a,b) withAccuracy:0.0001];
+		[self assertQuaternion:qAB equalsQuaternion:CLQuaternionFromCATransform3D(CATransform3DConcat(a, b)) withAccuracy:0.0001];
 	}
 }
 
@@ -84,7 +84,7 @@
 
 - (void) testInvert {
 	for (int trial = 0; trial < 200; trial++) {
-		CLQuaternion a = QuaternionFromCATransform3D(randomRotation());
+		CLQuaternion a = CLQuaternionFromCATransform3D(randomRotation());
 		CLQuaternion aInv = CLQuaternionInvert(a);
 		[self assertQuaternion:CLQuaternionMultiply(aInv, a) equalsQuaternion:CLQuaternionIdentity() withAccuracy:0.0000000001];
 	}

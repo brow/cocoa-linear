@@ -71,16 +71,16 @@
 
 - (void) testMultiply2 {
 	CATransform3D tA = randomRotation(), tB = randomRotation();
-	CLMatrix3x3 mA = Matrix3x3FromCATransform3D(tA), mB = Matrix3x3FromCATransform3D(tB);
-	CATransform3D test = Matrix3x3ToCATransform3D(CLMatrix3x3Multiply(mA, mB));
+	CLMatrix3x3 mA = CLMatrix3x3FromCATransform3D(tA), mB = CLMatrix3x3FromCATransform3D(tB);
+	CATransform3D test = CLMatrix3x3ToCATransform3D(CLMatrix3x3Multiply(mA, mB));
 	[self assertTransform:test equalsTransform:CATransform3DConcat(tA, tB) withAccuracy:0.001];
 }
 
 - (void) testMultiply3 {
 	CATransform3D tA = CATransform3DMakeRotation(M_PI/4, 0, 0, 1), tB = CATransform3DMakeScale(1, 0.5, 1);
-	CLMatrix3x3 mA = Matrix3x3FromCATransform3D(tA), mB = Matrix3x3FromCATransform3D(tB);
+	CLMatrix3x3 mA = CLMatrix3x3FromCATransform3D(tA), mB = CLMatrix3x3FromCATransform3D(tB);
 	
-	CATransform3D test = Matrix3x3ToCATransform3D(CLMatrix3x3Multiply(mA, mB));
+	CATransform3D test = CLMatrix3x3ToCATransform3D(CLMatrix3x3Multiply(mA, mB));
 
 	CATransform3D check = CATransform3DIdentity;
 	check = CATransform3DScale(check, 1, 0.5, 1);

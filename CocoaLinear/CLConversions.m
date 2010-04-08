@@ -1,6 +1,6 @@
 #import "CLConversions.h"
 
-CATransform3D Matrix3x3ToCATransform3D(CLMatrix3x3 m) {
+CATransform3D CLMatrix3x3ToCATransform3D(CLMatrix3x3 m) {
 	CATransform3D ret = CATransform3DIdentity;
 	ret.m11 = m.m11;
 	ret.m12 = m.m12;
@@ -14,7 +14,7 @@ CATransform3D Matrix3x3ToCATransform3D(CLMatrix3x3 m) {
 	return ret;
 }
 
-CLMatrix3x3 Matrix3x3FromCATransform3D(CATransform3D t) {
+CLMatrix3x3 CLMatrix3x3FromCATransform3D(CATransform3D t) {
 	CLMatrix3x3 ret;
 	ret.m11 = t.m11;
 	ret.m12 = t.m12;
@@ -28,7 +28,7 @@ CLMatrix3x3 Matrix3x3FromCATransform3D(CATransform3D t) {
 	return ret;
 }
 
-CLQuaternion QuaternionFromCATransform3D(CATransform3D q) {
+CLQuaternion CLQuaternionFromCATransform3D(CATransform3D q) {
 	float max = MAX(MAX(fabs(q.m11), fabs(q.m22)), fabs(q.m33));
 	CLQuaternion ret;
 	double r;
@@ -70,7 +70,7 @@ CLQuaternion QuaternionFromCATransform3D(CATransform3D q) {
 	return CLQuaternionNormalize(ret);
 }
 
-CATransform3D QuaternionToCATransform3D(CLQuaternion q) {
+CATransform3D CLQuaternionToCATransform3D(CLQuaternion q) {
 	CATransform3D ret = CATransform3DIdentity;
 	ret.m11 = 1- 2*q.z*q.z- 2*q.y*q.y;
 	ret.m12 = - 2* q.z*q.w+2*q.y*q.x;
